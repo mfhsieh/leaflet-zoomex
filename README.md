@@ -1,2 +1,2 @@
 # leaflet-zoomex
-Description: leaflet-zoomex
+Description: Leaflet.Control.ZoomEx
