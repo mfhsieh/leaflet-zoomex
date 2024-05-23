@@ -60,15 +60,23 @@ body {
     cursor: pointer;
 }
 
+.leaflet-zoomex-slider:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 0 white, 0 0 0 .25rem rgba(var(--primary-rgb), .25);
+}
+
 .leaflet-zoomex-slider::-moz-range-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: .8rem;
-    height: .8rem;
+    width: .875rem;
+    height: .875rem;
     border: .125rem solid rgba(255, 255, 255, 1);
-    border-radius: .8rem;
+    border-radius: .875rem;
     background: rgba(var(--primary-rgb), 1) !important;
     cursor: pointer;
+}
+
+.leaflet-zoomex-slider:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 0 white, 0 0 0 .25rem rgba(var(--primary-rgb), .25);
 }
 
 .leaflet-zoomex-out,
