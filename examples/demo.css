@@ -1,5 +1,5 @@
 html {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 body {
@@ -18,12 +18,12 @@ body {
 .leaflet-zoomex {
     display: flex;
     align-items: center;
-    padding: 0 .125rem 0 .125rem;
+    padding: .125rem;
     background-color: rgba(255, 255, 255, .67);
     border: .125rem solid rgba(255, 255, 255, 1);
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, .33) 0 .125rem .375rem;
-    opacity: 0.67;
+    opacity: .67;
     transition: opacity .2s;
 }
 
@@ -41,10 +41,10 @@ body {
     width: 100%;
     -webkit-appearance: none;
     appearance: none;
-    height: .4rem;
+    height: .5rem;
     padding: 0;
     margin: 0;
-    border-radius: .4rem;
+    border-radius: .5rem;
     background: rgba(var(--primary-rgb), .5) !important;
     outline: none;
 }
@@ -52,10 +52,10 @@ body {
 .leaflet-zoomex-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 1rem;
-    height: 1rem;
+    width: .875rem;
+    height: .875rem;
     border: .125rem solid rgba(255, 255, 255, 1);
-    border-radius: 1rem;
+    border-radius: .875rem;
     background: rgba(var(--primary-rgb), 1) !important;
     cursor: pointer;
 }
@@ -67,10 +67,10 @@ body {
 .leaflet-zoomex-slider::-moz-range-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: .875rem;
-    height: .875rem;
+    width: .75rem;
+    height: .75rem;
     border: .125rem solid rgba(255, 255, 255, 1);
-    border-radius: .875rem;
+    border-radius: .75rem;
     background: rgba(var(--primary-rgb), 1) !important;
     cursor: pointer;
 }
@@ -92,6 +92,13 @@ body {
     color: rgba(var(--primary-rgb), 1);
     background-color: transparent;
     cursor: pointer;
+}
+
+.leaflet-zoomex-out svg,
+.leaflet-zoomex-in svg {
+    fill: rgba(var(--primary-rgb), 1);
+    width: 1rem;
+    height: 1rem;
 }
 
 .leaflet-zoomex-topleft {
