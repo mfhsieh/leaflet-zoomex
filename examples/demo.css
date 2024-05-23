@@ -10,9 +10,9 @@ body {
 }
 
 #map {
-    height: 96vh;
+    height: calc(var(--vh, 1vh) * 96);
     width: 96vw;
-    margin: 2vh auto 0 auto;
+    margin: calc(var(--vh, 1vh) * 2) auto 0 auto;
 }
 
 .leaflet-zoomex {
@@ -165,7 +165,7 @@ body {
     position: absolute;
     margin: 0 !important;
     left: .5rem;
-    top: 48vh;
+    top: calc(var(--vh, 1vh) * 48);
     width: calc(var(--vh, 1vh) * 25);
     /* elem size: (25vh + .5rem) x 1.75rem  */
     transform: translateX(calc(-50% + 1.75rem / 2)) translateY(-50%) rotate(-90deg);
@@ -195,7 +195,7 @@ body {
     position: absolute;
     margin: 0 !important;
     right: .5rem;
-    top: 48vh;
+    top: calc(var(--vh, 1vh) * 48);
     width: calc(var(--vh, 1vh) * 25);
     /* elem size: (25vh + .5rem) x 1.75rem  */
     transform: translateX(calc(50% - 1.75rem / 2)) translateY(-50%) rotate(-90deg);
