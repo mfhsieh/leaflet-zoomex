@@ -19,6 +19,7 @@
             zoomInHtml: "&#43;",  // +
             zoomOutTitle: "Zoom Out",
             zoomInTitle: "Zoom In",
+            afterZoomEnd: null,
         },
 
         initialize: function (options) {
@@ -64,6 +65,7 @@
 
         _updateSlider: function () {
             this._slider.value = this._map.getZoom();
+            if (this.options.afterZoomEnd) this.options.afterZoomEnd();
         },
 
         _createButton: function (innerHTML, title, className, container, callback) {
