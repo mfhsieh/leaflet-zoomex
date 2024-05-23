@@ -1,3 +1,18 @@
+/* 
+ * Leaflet Control ZoomEx v0.1 - 2024-05-24 
+ * 
+ * Copyright 2024 mfhsieh
+ * mfhsieh@gmail.com 
+ * 
+ * Licensed under the MIT license. 
+ * 
+ * Demos: 
+ * https://mfhsieh.github.io/leaflet-zoomex/
+ * 
+ * Source: 
+ * git@github.com:mfhsieh/leaflet-zoomex.git 
+ * 
+ */
 "use strict";
 
 (function (factory) {

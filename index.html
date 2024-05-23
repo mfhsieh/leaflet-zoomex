@@ -14,6 +14,25 @@
 
     <script src="src/leaflet-zoomex.js"></script>
     <link rel="stylesheet" href="examples/demo.css" />
+
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            --primary-rgb: 25, 135, 84;
+        }
+
+        #map {
+            height: calc(var(--vh, 1vh) * 96);
+            width: 96vw;
+            margin: calc(var(--vh, 1vh) * 2) auto 0 auto;
+        }
+    </style>
 </head>
 
 <body>
