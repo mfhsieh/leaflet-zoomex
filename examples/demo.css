@@ -18,6 +18,7 @@ body {
 .leaflet-zoomex {
     display: flex;
     align-items: center;
+    padding: 0 .125rem 0 .125rem;
     background-color: rgba(255, 255, 255, .67);
     border: .125rem solid rgba(255, 255, 255, 1);
     border-radius: 2rem;
@@ -78,15 +79,11 @@ body {
     font-size: 1rem;
     width: 1rem;
     padding: 0;
-    margin: .25rem .125rem .25rem .375rem;
+    margin: .25rem;
     border: none;
     color: rgba(var(--primary-rgb), 1);
     background-color: transparent;
     cursor: pointer;
-}
-
-.leaflet-zoomex-in {
-    margin: .25rem .375rem .25rem .125rem;
 }
 
 .leaflet-zoomex-topleft {
@@ -94,7 +91,7 @@ body {
     margin: 0 !important;
     left: 2rem;
     top: .5rem;
-    width: 25vw;
+    width: 150px;
 }
 
 .leaflet-zoomex-topcenter {
@@ -145,8 +142,8 @@ body {
     left: .5rem;
     top: 2rem;
     width: 25vh;
-    /* elem size: (25vh + .25rem) x 1.75rem  */
-    transform: translateX(calc(-50% + 1.75rem / 2)) translateY(calc(-50% + (25vh + .25rem) / 2)) rotate(-90deg);
+    /* elem size: (25vh + .5rem) x 1.75rem  */
+    transform: translateX(calc(-50% + 1.75rem / 2)) translateY(calc(-50% + (25vh + .5rem) / 2)) rotate(-90deg);
 }
 
 .leaflet-zoomex-leftcenter {
@@ -155,7 +152,7 @@ body {
     left: .5rem;
     top: 48vh;
     width: 25vh;
-    /* elem size: (25vh + .25rem) x 1.75rem  */
+    /* elem size: (25vh + .5rem) x 1.75rem  */
     transform: translateX(calc(-50% + 1.75rem / 2)) translateY(-50%) rotate(-90deg);
 }
 
@@ -165,8 +162,8 @@ body {
     left: .5rem;
     bottom: 2rem;
     width: 25vh;
-    /* elem size: (25vh + .25rem) x 1.75rem  */
-    transform: translateX(calc(-50% + 1.75rem / 2)) translateY(calc(50% - 25vh / 2)) rotate(-90deg);
+    /* elem size: (25vh + .5rem) x 1.75rem  */
+    transform: translateX(calc(-50% + 1.75rem / 2)) translateY(calc(50% - (25vh + .5rem) / 2)) rotate(-90deg);
 }
 
 .leaflet-zoomex-righttop {
@@ -175,8 +172,8 @@ body {
     right: .5rem;
     top: 2rem;
     width: 25vh;
-    /* elem size: (25vh + .25rem) x 1.75rem  */
-    transform: translateX(calc(50% - 1.75rem / 2)) translateY(calc(-50% + (25vh + .25rem) / 2)) rotate(-90deg);
+    /* elem size: (25vh + .5rem) x 1.75rem  */
+    transform: translateX(calc(50% - 1.75rem / 2)) translateY(calc(-50% + (25vh + .5rem) / 2)) rotate(-90deg);
 }
 
 .leaflet-zoomex-rightcenter {
@@ -185,7 +182,7 @@ body {
     right: .5rem;
     top: 48vh;
     width: 25vh;
-    /* elem size: (25vh + .25rem) x 1.75rem  */
+    /* elem size: (25vh + .5rem) x 1.75rem  */
     transform: translateX(calc(50% - 1.75rem / 2)) translateY(-50%) rotate(-90deg);
 }
 
@@ -195,8 +192,8 @@ body {
     right: .5rem;
     bottom: 2rem;
     width: 25vh;
-    /* elem size: (25vh + .25rem) x 1.75rem  */
-    transform: translateX(calc(50% - 1.75rem / 2)) translateY(calc(50% - 25vh / 2)) rotate(-90deg);
+    /* elem size: (25vh + .5rem) x 1.75rem  */
+    transform: translateX(calc(50% - 1.75rem / 2)) translateY(calc(50% - (25vh + .5rem) / 2)) rotate(-90deg);
 }
 
 .leaflet-zoomex-lefttop,
