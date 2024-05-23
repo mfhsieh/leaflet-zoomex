@@ -1,0 +1,229 @@
+html {
+    font-size: 18px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    --primary-rgb: 25, 135, 84;
+}
+
+#map {
+    height: 96vh;
+    width: 96vw;
+    margin: 2vh auto 0 auto;
+}
+
+.leaflet-zoomex {
+    display: flex;
+    align-items: center;
+    padding: 0 .125rem 0 .125rem;
+    background-color: rgba(255, 255, 255, .67);
+    border: .125rem solid rgba(255, 255, 255, 1);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, .33) 0 .125rem .375rem;
+    opacity: 0.67;
+    transition: opacity .2s;
+}
+
+.leaflet-zoomex:hover {
+    opacity: 1;
+}
+
+.leaflet-zoomex-slider-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.leaflet-zoomex-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: .4rem;
+    padding: 0;
+    margin: 0;
+    border-radius: .4rem;
+    background: rgba(var(--primary-rgb), .5) !important;
+    outline: none;
+}
+
+.leaflet-zoomex-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: .125rem solid rgba(255, 255, 255, 1);
+    border-radius: 1rem;
+    background: rgba(var(--primary-rgb), 1) !important;
+    cursor: pointer;
+}
+
+.leaflet-zoomex-slider:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 0 white, 0 0 0 .25rem rgba(var(--primary-rgb), .25);
+}
+
+.leaflet-zoomex-slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: .875rem;
+    height: .875rem;
+    border: .125rem solid rgba(255, 255, 255, 1);
+    border-radius: .875rem;
+    background: rgba(var(--primary-rgb), 1) !important;
+    cursor: pointer;
+}
+
+.leaflet-zoomex-slider:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 0 white, 0 0 0 .25rem rgba(var(--primary-rgb), .25);
+}
+
+.leaflet-zoomex-out,
+.leaflet-zoomex-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 1rem;
+    padding: 0;
+    margin: .25rem;
+    border: none;
+    color: rgba(var(--primary-rgb), 1);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.leaflet-zoomex-topleft {
+    position: absolute;
+    margin: 0 !important;
+    left: 2rem;
+    top: .5rem;
+    width: 25vw;
+}
+
+.leaflet-zoomex-topcenter {
+    position: absolute;
+    margin: 0 !important;
+    left: 48vw;
+    top: .5rem;
+    width: 25vw;
+    transform: translateX(-50%);
+}
+
+.leaflet-zoomex-topright {
+    position: absolute;
+    margin: 0 !important;
+    right: 2rem;
+    top: .5rem;
+    width: 25vw;
+}
+
+.leaflet-zoomex-bottomleft {
+    position: absolute;
+    margin: 0 !important;
+    left: 2rem;
+    bottom: .5rem;
+    width: 25vw;
+}
+
+.leaflet-zoomex-bottomcenter {
+    position: absolute;
+    margin: 0 !important;
+    left: 48vw;
+    bottom: .5rem;
+    width: 25vw;
+    transform: translateX(-50%);
+}
+
+.leaflet-zoomex-bottomright {
+    position: absolute;
+    margin: 0 !important;
+    right: 2rem;
+    bottom: .5rem;
+    width: 25vw;
+}
+
+.leaflet-zoomex-lefttop {
+    position: absolute;
+    margin: 0 !important;
+    left: .5rem;
+    top: 2rem;
+    width: 25vh;
+    /* elem size: (25vh + .5rem) x 1.75rem  */
+    transform: translateX(calc(-50% + 1.75rem / 2)) translateY(calc(-50% + (25vh + .5rem) / 2)) rotate(-90deg);
+}
+
+.leaflet-zoomex-leftcenter {
+    position: absolute;
+    margin: 0 !important;
+    left: .5rem;
+    top: 48vh;
+    width: 25vh;
+    /* elem size: (25vh + .5rem) x 1.75rem  */
+    transform: translateX(calc(-50% + 1.75rem / 2)) translateY(-50%) rotate(-90deg);
+}
+
+.leaflet-zoomex-leftbottom {
+    position: absolute;
+    margin: 0 !important;
+    left: .5rem;
+    bottom: 2rem;
+    width: 25vh;
+    /* elem size: (25vh + .5rem) x 1.75rem  */
+    transform: translateX(calc(-50% + 1.75rem / 2)) translateY(calc(50% - (25vh + .5rem) / 2)) rotate(-90deg);
+}
+
+.leaflet-zoomex-righttop {
+    position: absolute;
+    margin: 0 !important;
+    right: .5rem;
+    top: 2rem;
+    width: 25vh;
+    /* elem size: (25vh + .5rem) x 1.75rem  */
+    transform: translateX(calc(50% - 1.75rem / 2)) translateY(calc(-50% + (25vh + .5rem) / 2)) rotate(-90deg);
+}
+
+.leaflet-zoomex-rightcenter {
+    position: absolute;
+    margin: 0 !important;
+    right: .5rem;
+    top: 48vh;
+    width: 25vh;
+    /* elem size: (25vh + .5rem) x 1.75rem  */
+    transform: translateX(calc(50% - 1.75rem / 2)) translateY(-50%) rotate(-90deg);
+}
+
+.leaflet-zoomex-rightbottom {
+    position: absolute;
+    margin: 0 !important;
+    right: .5rem;
+    bottom: 2rem;
+    width: 25vh;
+    /* elem size: (25vh + .5rem) x 1.75rem  */
+    transform: translateX(calc(50% - 1.75rem / 2)) translateY(calc(50% - (25vh + .5rem) / 2)) rotate(-90deg);
+}
+
+.leaflet-zoomex-lefttop,
+.leaflet-zoomex-leftcenter,
+.leaflet-zoomex-leftbottom,
+.leaflet-zoomex-righttop,
+.leaflet-zoomex-rightcenter,
+.leaflet-zoomex-rightbottom {
+    box-shadow: rgba(0, 0, 0, .33) -.125rem 0 .375rem;
+}
+
+.leaflet-zoomex-lefttop .leaflet-zoomex-out,
+.leaflet-zoomex-lefttop .leaflet-zoomex-in,
+.leaflet-zoomex-leftcenter .leaflet-zoomex-out,
+.leaflet-zoomex-leftcenter .leaflet-zoomex-in,
+.leaflet-zoomex-leftbottom .leaflet-zoomex-out,
+.leaflet-zoomex-leftbottom .leaflet-zoomex-in,
+.leaflet-zoomex-righttop .leaflet-zoomex-out,
+.leaflet-zoomex-righttop .leaflet-zoomex-in,
+.leaflet-zoomex-rightcenter .leaflet-zoomex-out,
+.leaflet-zoomex-rightcenter .leaflet-zoomex-in,
+.leaflet-zoomex-rightbottom .leaflet-zoomex-out,
+.leaflet-zoomex-rightbottom .leaflet-zoomex-in {
+    transform: rotate(90deg);
+}
