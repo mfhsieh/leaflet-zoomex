@@ -22,7 +22,12 @@
     <script>
         "use strict";
 
-        document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+        function set_viewport() {
+            document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+        }
+
+        set_viewport();
+        window.addEventListener("resize", set_viewport);
 
         let map = new L.Map("map", {
             center: [25.048003, 121.517062],
@@ -39,8 +44,6 @@
         new L.Control.ZoomEx({
             position: "topleft",
             className: "leaflet-zoomex-topleft",
-            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
-            zoomInHtml: '<i class="fas fa-search-plus"></i>',
         }).addTo(map);
 
         new L.Control.ZoomEx({
@@ -53,13 +56,13 @@
         new L.Control.ZoomEx({
             position: "topright",
             className: "leaflet-zoomex-topright",
+            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
+            zoomInHtml: '<i class="fas fa-search-plus"></i>',
         }).addTo(map);
 
         new L.Control.ZoomEx({
             position: "bottomleft",
             className: "leaflet-zoomex-bottomleft",
-            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
-            zoomInHtml: '<i class="fas fa-search-plus"></i>',
         }).addTo(map);
 
         new L.Control.ZoomEx({
@@ -72,13 +75,13 @@
         new L.Control.ZoomEx({
             position: "bottomright",
             className: "leaflet-zoomex-bottomright",
+            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
+            zoomInHtml: '<i class="fas fa-search-plus"></i>',
         }).addTo(map);
 
         new L.Control.ZoomEx({
             position: "topleft",
             className: "leaflet-zoomex-lefttop",
-            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
-            zoomInHtml: '<i class="fas fa-search-plus"></i>',
         }).addTo(map);
 
         new L.Control.ZoomEx({
@@ -91,13 +94,13 @@
         new L.Control.ZoomEx({
             position: "bottomleft",
             className: "leaflet-zoomex-leftbottom",
+            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
+            zoomInHtml: '<i class="fas fa-search-plus"></i>',
         }).addTo(map);
 
         new L.Control.ZoomEx({
             position: "topright",
             className: "leaflet-zoomex-righttop",
-            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
-            zoomInHtml: '<i class="fas fa-search-plus"></i>',
         }).addTo(map);
 
         new L.Control.ZoomEx({
@@ -110,6 +113,8 @@
         new L.Control.ZoomEx({
             position: "bottomright",
             className: "leaflet-zoomex-rightbottom",
+            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
+            zoomInHtml: '<i class="fas fa-search-plus"></i>',
         }).addTo(map);
     </script>
 </body>
