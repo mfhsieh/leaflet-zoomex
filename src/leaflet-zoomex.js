@@ -50,6 +50,7 @@
 
             let container = L.DomUtil.create("div", "leaflet-zoomex");
             if (this.options.className) L.DomUtil.addClass(container, this.options.className);
+            L.DomEvent.disableClickPropagation(container);
 
             this._zoomOutButton = this._createButton(this.options.zoomOutHtml, "leaflet-zoomex-out", container, this._zoomOut, this.options.zoomOutTitle, this.options.zoomOutAriaLabel);
 
@@ -106,8 +107,6 @@
                 .on(button, "click", L.DomEvent.stopPropagation)
                 .on(button, "click", L.DomEvent.preventDefault)
                 .on(button, "click", callback, this);
-
-            L.DomEvent.disableClickPropagation(button);
 
             return button;
         },
