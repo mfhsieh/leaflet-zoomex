@@ -16,7 +16,7 @@
 .leaflet-zoomex {
     display: flex;
     align-items: center;
-    /* Used to simplify the rules for adjusting positions with translate. */
+    /* to simplify the rules for adjusting positions with translate */
     box-sizing: border-box;
     padding: .125rem;
     background-color: rgba(255, 255, 255, .67);
@@ -52,7 +52,7 @@
 .leaflet-zoomex-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    /* Make the settings for webkit and moz consistent. */
+    /* to make webkit and moz consistent */
     box-sizing: content-box;
     width: .75rem;
     height: .75rem;
@@ -69,7 +69,7 @@
 .leaflet-zoomex-slider::-moz-range-thumb {
     -webkit-appearance: none;
     appearance: none;
-    /* Make the settings for webkit and moz consistent. */
+    /* to make webkit and moz consistent */
     box-sizing: content-box;
     width: .75rem;
     height: .75rem;
