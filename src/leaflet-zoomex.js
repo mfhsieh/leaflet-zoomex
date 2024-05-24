@@ -55,8 +55,6 @@
             this._zoomOutButton = this._createButton(this.options.zoomOutHtml, "leaflet-zoomex-out", container, this._zoomOut, this.options.zoomOutTitle, this.options.zoomOutAriaLabel);
 
             this._sliderContainer = L.DomUtil.create("div", "leaflet-zoomex-slider-container", container);
-            L.DomEvent.disableClickPropagation(this._sliderContainer);
-
             this._slider = L.DomUtil.create("input", "leaflet-zoomex-slider", this._sliderContainer);
             this._slider.type = "range";
             this._slider.min = map.getMinZoom();
