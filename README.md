@@ -1,2 +1,2 @@
 # Leaflet.Control.ZoomEx
-Please refer to the [example](https://mfhsieh.github.io/leaflet-zoomex/) ( [index.html](https://github.com/mfhsieh/leaflet-zoomex/blob/main/index.html) and [examples/demo.css](https://github.com/mfhsieh/leaflet-zoomex/blob/main/examples/demo.css) ).
+Please refer to the [example](https://mfhsieh.github.io/leaflet-zoomex/) (including [index.html](https://github.com/mfhsieh/leaflet-zoomex/blob/main/index.html) and [examples/demo.css](https://github.com/mfhsieh/leaflet-zoomex/blob/main/examples/demo.css)).
