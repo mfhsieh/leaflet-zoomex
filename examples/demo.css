@@ -16,6 +16,8 @@
 .leaflet-zoomex {
     display: flex;
     align-items: center;
+    /* Used to simplify the rules for adjusting positions with translate. */
+    box-sizing: border-box;
     padding: .125rem;
     background-color: rgba(255, 255, 255, .67);
     border: .125rem solid rgba(255, 255, 255, 1);
@@ -36,9 +38,9 @@
 }
 
 .leaflet-zoomex-slider {
-    width: 100%;
     -webkit-appearance: none;
     appearance: none;
+    width: 100%;
     height: .5rem;
     padding: 0;
     margin: 0;
@@ -50,21 +52,25 @@
 .leaflet-zoomex-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: .875rem;
-    height: .875rem;
+    /* Make the settings for webkit and moz consistent. */
+    box-sizing: content-box;
+    width: .75rem;
+    height: .75rem;
     border: .125rem solid rgba(255, 255, 255, 1);
-    border-radius: .875rem;
+    border-radius: .75rem;
     background: rgba(var(--primary-rgb), 1) !important;
     cursor: pointer;
 }
 
 .leaflet-zoomex-slider:focus::-webkit-slider-thumb {
-    box-shadow: 0 0 0 0 white, 0 0 0 .25rem rgba(var(--primary-rgb), .25);
+    box-shadow: 0 0 0 .25rem rgba(var(--primary-rgb), .25);
 }
 
 .leaflet-zoomex-slider::-moz-range-thumb {
     -webkit-appearance: none;
     appearance: none;
+    /* Make the settings for webkit and moz consistent. */
+    box-sizing: content-box;
     width: .75rem;
     height: .75rem;
     border: .125rem solid rgba(255, 255, 255, 1);
@@ -74,7 +80,7 @@
 }
 
 .leaflet-zoomex-slider:focus::-moz-range-thumb {
-    box-shadow: 0 0 0 0 white, 0 0 0 .25rem rgba(var(--primary-rgb), .25);
+    box-shadow: 0 0 0 .25rem rgba(var(--primary-rgb), .25);
 }
 
 .leaflet-zoomex-out,
@@ -155,8 +161,8 @@
     left: .5rem;
     top: 2rem;
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: (25vh + .5rem) x 1.75rem  */
-    transform: translateX(calc(-50% + 1.75rem / 2)) translateY(calc(-50% + (var(--vh, 1vh) * 25 + .5rem) / 2)) rotate(-90deg);
+    /* elem size: 25vh x 2rem  */
+    transform: translateX(calc(-50% + 2rem / 2)) translateY(calc(-50% + var(--vh, 1vh) * 25 / 2)) rotate(-90deg);
 }
 
 .leaflet-zoomex-leftcenter {
@@ -165,8 +171,8 @@
     left: .5rem;
     top: calc(var(--vh, 1vh) * 48);
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: (25vh + .5rem) x 1.75rem  */
-    transform: translateX(calc(-50% + 1.75rem / 2)) translateY(-50%) rotate(-90deg);
+    /* elem size: 25vh x 2rem  */
+    transform: translateX(calc(-50% + 2rem / 2)) translateY(-50%) rotate(-90deg);
 }
 
 .leaflet-zoomex-leftbottom {
@@ -175,8 +181,8 @@
     left: .5rem;
     bottom: 2rem;
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: (25vh + .5rem) x 1.75rem  */
-    transform: translateX(calc(-50% + 1.75rem / 2)) translateY(calc(50% - (var(--vh, 1vh) * 25 + .5rem) / 2)) rotate(-90deg);
+    /* elem size: 25vh x 2rem  */
+    transform: translateX(calc(-50% + 2rem / 2)) translateY(calc(50% - var(--vh, 1vh) * 25 / 2)) rotate(-90deg);
 }
 
 .leaflet-zoomex-righttop {
@@ -185,8 +191,8 @@
     right: .5rem;
     top: 2rem;
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: (25vh + .5rem) x 1.75rem  */
-    transform: translateX(calc(50% - 1.75rem / 2)) translateY(calc(-50% + (var(--vh, 1vh) * 25 + .5rem) / 2)) rotate(-90deg);
+    /* elem size: 25vh x 2rem  */
+    transform: translateX(calc(50% - 2rem / 2)) translateY(calc(-50% + var(--vh, 1vh) * 25 / 2)) rotate(-90deg);
 }
 
 .leaflet-zoomex-rightcenter {
@@ -195,8 +201,8 @@
     right: .5rem;
     top: calc(var(--vh, 1vh) * 48);
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: (25vh + .5rem) x 1.75rem  */
-    transform: translateX(calc(50% - 1.75rem / 2)) translateY(-50%) rotate(-90deg);
+    /* elem size: 25vh x 2rem  */
+    transform: translateX(calc(50% - 2rem / 2)) translateY(-50%) rotate(-90deg);
 }
 
 .leaflet-zoomex-rightbottom {
@@ -205,8 +211,8 @@
     right: .5rem;
     bottom: 2rem;
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: (25vh + .5rem) x 1.75rem  */
-    transform: translateX(calc(50% - 1.75rem / 2)) translateY(calc(50% - (var(--vh, 1vh) * 25 + .5rem) / 2)) rotate(-90deg);
+    /* elem size: 25vh x 2rem  */
+    transform: translateX(calc(50% - 2rem / 2)) translateY(calc(50% - var(--vh, 1vh) * 25 / 2)) rotate(-90deg);
 }
 
 .leaflet-zoomex-lefttop,
