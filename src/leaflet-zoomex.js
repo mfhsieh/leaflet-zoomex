@@ -16,17 +16,23 @@
 "use strict";
 
 (function (factory) {
-    if (typeof define === "function" && define.amd)
-        define(["leaflet"], factory);
-    else if (typeof module !== "undefined")
-        module.exports = factory(require("leaflet"));
-    else {
-        if (typeof window.L === "undefined") throw "Leaflet must be loaded first";
-        factory(window.L);
+
+    if (typeof define === 'function' && define.amd) {
+        // define an AMD module that relies on 'leaflet'
+        define(['leaflet'], factory);
+
+    } else if (typeof exports === 'object') {
+        // define a Common JS module that relies on 'leaflet'
+        module.exports = factory(require('leaflet'));
+
+    } else if (typeof window !== 'undefined') {
+        // attach your plugin to the global 'L' variable
+        if (typeof window.L === "undefined") throw "Leaflet must be loaded first.";
+        window.L.Control.ZoomEx = factory(window.L);
     }
 })(function (L) {
 
-    L.Control.ZoomEx = L.Control.extend({
+    let control = L.Control.extend({
 
         options: {
             className: "",
@@ -109,4 +115,6 @@
             return button;
         },
     });
+
+    return control;
 });
