@@ -13,8 +13,6 @@
  * git@github.com:mfhsieh/leaflet-zoomex.git 
  * 
  */
-"use strict";
-
 (function (factory) {
 
     if (typeof define === 'function' && define.amd) {
@@ -31,6 +29,7 @@
         window.L.Control.ZoomEx = factory(window.L);
     }
 })(function (L) {
+    "use strict";
 
     let control = L.Control.extend({
 
