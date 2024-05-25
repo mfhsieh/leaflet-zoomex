@@ -41,9 +41,9 @@
             zoomOutTitle: "Map Zoom Out",
             zoomInTitle: "Map Zoom In",
             sliderTitle: "Map Zoom In / Zoom Out Slider",
-            zoomOutAriaLabel: "Map Zoom Out",
-            zoomInAriaLabel: "Map Zoom In",
-            sliderAriaLabel: "Map Zoom In / Zoom Out Slider",
+            zoomOutAriaLabel: "",
+            zoomInAriaLabel: "",
+            sliderAriaLabel: "",
             afterZoomEnd: null,
         },
 
@@ -69,7 +69,7 @@
             this._slider.step = 1;
 
             this._slider.title = this.options.sliderTitle;
-            this._slider.setAttribute("aria-label", this.options.sliderAriaLabel);
+            this._slider.setAttribute("aria-label", this.options.sliderAriaLabel ? this.options.sliderAriaLabel : this.options.sliderTitle);
             this._slider.setAttribute("aria-valuemin", this._slider.min);
             this._slider.setAttribute("aria-valuemax", this._slider.max);
             this._slider.setAttribute("aria-valuenow", this._slider.value);
@@ -105,7 +105,7 @@
             button.innerHTML = innerHTML;
 
             button.title = title;
-            button.setAttribute("aria-label", ariaLabel);
+            button.setAttribute("aria-label", ariaLabel ? ariaLabel : title);
 
             L.DomEvent
                 .on(button, "click", L.DomEvent.stopPropagation)
