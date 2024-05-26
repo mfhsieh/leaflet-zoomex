@@ -31,7 +31,7 @@
 })(function (L) {
     "use strict";
 
-    let control = L.Control.extend({
+    const control = L.Control.extend({
 
         options: {
             className: "",
@@ -53,7 +53,7 @@
         onAdd: function (map) {
             this._map = map;
 
-            let container = L.DomUtil.create("div", "leaflet-zoomex");
+            const container = L.DomUtil.create("div", "leaflet-zoomex");
             if (this.options.className) L.DomUtil.addClass(container, this.options.className);
             L.DomEvent.disableClickPropagation(container);
 
@@ -100,7 +100,7 @@
         },
 
         _createButton: function (innerHTML, className, container, callback, title, ariaLabel) {
-            let button = L.DomUtil.create("button", className, container);
+            const button = L.DomUtil.create("button", className, container);
             button.innerHTML = innerHTML;
 
             button.title = title;
