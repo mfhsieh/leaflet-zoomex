@@ -106,10 +106,7 @@
             button.title = title;
             button.setAttribute("aria-label", ariaLabel ? ariaLabel : title);
 
-            L.DomEvent
-                .on(button, "click", L.DomEvent.stopPropagation)
-                .on(button, "click", L.DomEvent.preventDefault)
-                .on(button, "click", callback, this);
+            L.DomEvent.on(button, "click", callback, this);
 
             return button;
         },
