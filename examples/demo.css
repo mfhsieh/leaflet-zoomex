@@ -130,7 +130,7 @@
 .leaflet-zoomex-topcenter {
     position: absolute;
     margin: 0 !important;
-    left: 48vw;
+    left: 50vw;
     top: .5rem;
     width: 30vw;
     transform: translateX(-50%);
@@ -155,7 +155,7 @@
 .leaflet-zoomex-bottomcenter {
     position: absolute;
     margin: 0 !important;
-    left: 48vw;
+    left: 50vw;
     bottom: .5rem;
     width: 30vw;
     transform: translateX(-50%);
@@ -183,7 +183,7 @@
     position: absolute;
     margin: 0 !important;
     left: .5rem;
-    top: calc(var(--vh, 1vh) * 48);
+    top: calc(var(--vh, 1vh) * 50);
     width: calc(var(--vh, 1vh) * 25);
     /* elem size: 30vh x 2.5rem  */
     transform: translateX(calc(-50% + 2.5rem / 2)) translateY(-50%) rotate(-90deg);
@@ -213,7 +213,7 @@
     position: absolute;
     margin: 0 !important;
     right: .5rem;
-    top: calc(var(--vh, 1vh) * 48);
+    top: calc(var(--vh, 1vh) * 50);
     width: calc(var(--vh, 1vh) * 25);
     /* elem size: 30vh x 2.5rem  */
     transform: translateX(calc(50% - 2.5rem / 2)) translateY(-50%) rotate(-90deg);
