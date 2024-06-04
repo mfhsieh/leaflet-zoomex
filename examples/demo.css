@@ -13,6 +13,15 @@
  * git@github.com:mfhsieh/leaflet-zoomex.git 
  * 
  */
+@-moz-document url-prefix() {
+
+    .leaflet-zoomex-in .fa,
+    .leaflet-zoomex-in .fas {
+        margin-top: .05rem;
+        margin-bottom: -.05rem;
+    }
+}
+
 .leaflet-zoomex {
     display: flex;
     align-items: center;
