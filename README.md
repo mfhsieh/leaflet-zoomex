@@ -19,7 +19,7 @@ Simply include the [JS](https://github.com/mfhsieh/leaflet-zoomex/blob/main/src/
 </head>
 ```
 
-And adding the zoom control to the map.
+And add the zoom control to the map.
 
 ```
 new L.Control.ZoomEx({
