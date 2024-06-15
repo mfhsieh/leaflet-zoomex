@@ -1,5 +1,5 @@
 /* 
- * Leaflet Control ZoomEx v1.0 - 2024-05-24 
+ * Leaflet Control ZoomEx v1.0.0 - 2024-06-15
  * 
  * Copyright 2024 mfhsieh
  * mfhsieh@gmail.com 
