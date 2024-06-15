@@ -48,4 +48,4 @@ For more examples, refer to this [demo](https://mfhsieh.github.io/leaflet-zoomex
 
 # Where
 
-Source Code: [Github](https://github.com/mfhsieh/leaflet-zoomex)
+* Source Code: [Github](https://github.com/mfhsieh/leaflet-zoomex)
