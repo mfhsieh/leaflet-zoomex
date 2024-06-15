@@ -16,9 +16,11 @@
 @-moz-document url-prefix() {
 
     .leaflet-zoomex-out .fa,
+    .leaflet-zoomex-out .fab,
     .leaflet-zoomex-out .far,
     .leaflet-zoomex-out .fas,
     .leaflet-zoomex-in .fa,
+    .leaflet-zoomex-in .fab,
     .leaflet-zoomex-in .far,
     .leaflet-zoomex-in .fas {
         margin-top: .05rem;
