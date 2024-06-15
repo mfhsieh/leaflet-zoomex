@@ -16,8 +16,10 @@
 @-moz-document url-prefix() {
 
     .leaflet-zoomex-out .fa,
+    .leaflet-zoomex-out .far,
     .leaflet-zoomex-out .fas,
     .leaflet-zoomex-in .fa,
+    .leaflet-zoomex-in .far,
     .leaflet-zoomex-in .fas {
         margin-top: .05rem;
         margin-bottom: -.05rem;
@@ -69,6 +71,7 @@
     border-radius: .75rem;
     background: rgba(var(--primary-rgb), .5) !important;
     outline: none;
+    cursor: pointer;
 }
 
 .leaflet-zoomex-slider::-webkit-slider-thumb {
@@ -81,7 +84,7 @@
     border: .1875rem solid rgba(255, 255, 255, 1);
     border-radius: 1.125rem;
     background: rgba(var(--primary-rgb), 1) !important;
-    cursor: pointer;
+    cursor: grab;
 }
 
 .leaflet-zoomex-slider:focus::-webkit-slider-thumb {
@@ -102,7 +105,7 @@
     border: .1875rem solid rgba(255, 255, 255, 1);
     border-radius: 1.125rem;
     background: rgba(var(--primary-rgb), 1) !important;
-    cursor: pointer;
+    cursor: grab;
 }
 
 .leaflet-zoomex-slider:focus::-moz-range-thumb {
@@ -140,7 +143,7 @@
     margin: 0 !important;
     left: 2.5rem;
     top: .5rem;
-    width: 30vw;
+    width: 25vw;
 }
 
 .leaflet-zoomex-topcenter {
@@ -148,7 +151,7 @@
     margin: 0 !important;
     left: 50vw;
     top: .5rem;
-    width: 30vw;
+    width: 25vw;
     transform: translateX(-50%);
 }
 
@@ -157,7 +160,7 @@
     margin: 0 !important;
     right: 2.5rem;
     top: .5rem;
-    width: 30vw;
+    width: 25vw;
 }
 
 .leaflet-zoomex-bottomleft {
@@ -165,7 +168,7 @@
     margin: 0 !important;
     left: 2.5rem;
     bottom: .5rem;
-    width: 30vw;
+    width: 25vw;
 }
 
 .leaflet-zoomex-bottomcenter {
@@ -173,7 +176,7 @@
     margin: 0 !important;
     left: 50vw;
     bottom: .5rem;
-    width: 30vw;
+    width: 25vw;
     transform: translateX(-50%);
 }
 
@@ -182,7 +185,7 @@
     margin: 0 !important;
     right: 2.5rem;
     bottom: .5rem;
-    width: 30vw;
+    width: 25vw;
 }
 
 .leaflet-zoomex-lefttop {
@@ -191,7 +194,7 @@
     left: .5rem;
     top: 2.5rem;
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: 30vh x 2.5rem  */
+    /* elem size: 25vh x 2.5rem  */
     transform: translateX(calc(-50% + 2.5rem / 2)) translateY(calc(-50% + var(--vh, 1vh) * 25 / 2)) rotate(-90deg);
 }
 
@@ -201,7 +204,7 @@
     left: .5rem;
     top: calc(var(--vh, 1vh) * 50);
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: 30vh x 2.5rem  */
+    /* elem size: 25vh x 2.5rem  */
     transform: translateX(calc(-50% + 2.5rem / 2)) translateY(-50%) rotate(-90deg);
 }
 
@@ -211,7 +214,7 @@
     left: .5rem;
     bottom: 2.5rem;
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: 30vh x 2.5rem  */
+    /* elem size: 25vh x 2.5rem  */
     transform: translateX(calc(-50% + 2.5rem / 2)) translateY(calc(50% - var(--vh, 1vh) * 25 / 2)) rotate(-90deg);
 }
 
@@ -221,7 +224,7 @@
     right: .5rem;
     top: 2.5rem;
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: 30vh x 2.5rem  */
+    /* elem size: 25vh x 2.5rem  */
     transform: translateX(calc(50% - 2.5rem / 2)) translateY(calc(-50% + var(--vh, 1vh) * 25 / 2)) rotate(-90deg);
 }
 
@@ -231,7 +234,7 @@
     right: .5rem;
     top: calc(var(--vh, 1vh) * 50);
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: 30vh x 2.5rem  */
+    /* elem size: 25vh x 2.5rem  */
     transform: translateX(calc(50% - 2.5rem / 2)) translateY(-50%) rotate(-90deg);
 }
 
@@ -241,7 +244,7 @@
     right: .5rem;
     bottom: 2.5rem;
     width: calc(var(--vh, 1vh) * 25);
-    /* elem size: 30vh x 2.5rem  */
+    /* elem size: 25vh x 2.5rem  */
     transform: translateX(calc(50% - 2.5rem / 2)) translateY(calc(50% - var(--vh, 1vh) * 25 / 2)) rotate(-90deg);
 }
 

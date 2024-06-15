@@ -47,61 +47,61 @@
         set_viewport();
         window.addEventListener("resize", set_viewport);
 
-        let map = new L.Map("map", {
-            center: [25.048003, 121.517062],
+        const map = new L.Map("map", {
+            center: [25.0487037, 121.5143449],
             zoom: 13,
             zoomControl: false,
         });
 
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-            minZoom: 7,
+            minZoom: 3,
             maxZoom: 19,
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
         }).addTo(map);
 
-        // new L.Control.ZoomEx({
-        //     position: "topleft",
-        //     className: "leaflet-zoomex-topleft",
-        //     zoomOutHtml: '<i class="fas fa-minus-square"></i></i>',
-        //     zoomInHtml: '<i class="fas fa-plus-square"></i>',
-        // }).addTo(map);
+        new L.Control.ZoomEx({
+            position: "topleft",
+            className: "leaflet-zoomex-topleft",
+            zoomOutHtml: '<i class="fas fa-minus-square"></i>',
+            zoomInHtml: '<i class="fas fa-plus-square"></i>',
+        }).addTo(map);
 
         new L.Control.ZoomEx({
             position: "topleft",
             className: "leaflet-zoomex-topcenter",
         }).addTo(map);
 
-        // new L.Control.ZoomEx({
-        //     position: "topright",
-        //     className: "leaflet-zoomex-topright",
-        //     zoomOutHtml: '<i class="fas fa-search-minus"></i>',
-        //     zoomInHtml: '<i class="fas fa-search-plus"></i>',
-        // }).addTo(map);
+        new L.Control.ZoomEx({
+            position: "topright",
+            className: "leaflet-zoomex-topright",
+            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
+            zoomInHtml: '<i class="fas fa-search-plus"></i>',
+        }).addTo(map);
 
-        // new L.Control.ZoomEx({
-        //     position: "bottomleft",
-        //     className: "leaflet-zoomex-bottomleft",
-        //     zoomOutHtml: '<i class="fas fa-minus-square"></i>',
-        //     zoomInHtml: '<i class="fas fa-plus-square"></i>',
-        // }).addTo(map);
+        new L.Control.ZoomEx({
+            position: "bottomleft",
+            className: "leaflet-zoomex-bottomleft",
+            zoomOutHtml: '<i class="far fa-minus-square"></i>',
+            zoomInHtml: '<i class="far fa-plus-square"></i>',
+        }).addTo(map);
 
         new L.Control.ZoomEx({
             position: "bottomleft",
             className: "leaflet-zoomex-bottomcenter",
         }).addTo(map);
 
-        // new L.Control.ZoomEx({
-        //     position: "bottomright",
-        //     className: "leaflet-zoomex-bottomright",
-        //     zoomOutHtml: '<i class="fas fa-search-minus"></i>',
-        //     zoomInHtml: '<i class="fas fa-search-plus"></i>',
-        // }).addTo(map);
+        new L.Control.ZoomEx({
+            position: "bottomright",
+            className: "leaflet-zoomex-bottomright",
+            zoomOutHtml: '<i class="fas fa-minus"></i>',
+            zoomInHtml: '<i class="fas fa-plus"></i>',
+        }).addTo(map);
 
         new L.Control.ZoomEx({
             position: "topleft",
             className: "leaflet-zoomex-lefttop",
-            zoomOutHtml: '<i class="fas fa-minus-square"></i></i>',
-            zoomInHtml: '<i class="fas fa-plus-square"></i>',
+            zoomOutHtml: '<i class="fas fa-chevron-circle-down"></i>',
+            zoomInHtml: '<i class="fas fa-chevron-circle-up"></i>',
         }).addTo(map);
 
         new L.Control.ZoomEx({
@@ -112,15 +112,15 @@
         new L.Control.ZoomEx({
             position: "bottomleft",
             className: "leaflet-zoomex-leftbottom",
-            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
-            zoomInHtml: '<i class="fas fa-search-plus"></i>',
+            zoomOutHtml: '<i class="fas fa-caret-square-down"></i>',
+            zoomInHtml: '<i class="fas fa-caret-square-up"></i>',
         }).addTo(map);
 
         new L.Control.ZoomEx({
             position: "topright",
             className: "leaflet-zoomex-righttop",
-            zoomOutHtml: '<i class="fas fa-minus-square"></i>',
-            zoomInHtml: '<i class="fas fa-plus-square"></i>',
+            zoomOutHtml: '<i class="fas fa-arrow-circle-down"></i>',
+            zoomInHtml: '<i class="fas fa-arrow-circle-up"></i>',
         }).addTo(map);
 
         new L.Control.ZoomEx({
@@ -131,8 +131,8 @@
         new L.Control.ZoomEx({
             position: "bottomright",
             className: "leaflet-zoomex-rightbottom",
-            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
-            zoomInHtml: '<i class="fas fa-search-plus"></i>',
+            zoomOutHtml: '<i class="fas fa-arrow-alt-circle-down"></i>',
+            zoomInHtml: '<i class="fas fa-arrow-alt-circle-up"></i>',
         }).addTo(map);
     </script>
 </body>
