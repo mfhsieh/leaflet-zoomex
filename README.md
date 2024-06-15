@@ -25,7 +25,7 @@ new L.Control.ZoomEx({
 }).addTo(map);
 ```
 
-For more examples, refer to this [demo](https://mfhsieh.github.io/leaflet-zoomex/) (source code: [index.html](https://github.com/mfhsieh/leaflet-zoomex/blob/main/index.html)).
+For more examples, refer to this [demo](https://mfhsieh.github.io/leaflet-zoomex/) (code: [index.html](https://github.com/mfhsieh/leaflet-zoomex/blob/main/index.html), [demo.css](https://github.com/mfhsieh/leaflet-zoomex/blob/main/examples/demo.css)).
 
 
 # Options
