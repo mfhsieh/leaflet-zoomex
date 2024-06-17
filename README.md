@@ -11,7 +11,7 @@ A Leaflet plugin that displays a zoom control on the map, with a customizable ap
 
 Simply include the [JS](https://github.com/mfhsieh/leaflet-zoomex/blob/main/dist/leaflet-zoomex.min.js) and [CSS](https://github.com/mfhsieh/leaflet-zoomex/blob/main/examples/demo.css) in the head.
 
-```
+```html
 <head>
     ...
     <script src="dist/leaflet-zoomex.min.js"></script>
@@ -22,7 +22,7 @@ Simply include the [JS](https://github.com/mfhsieh/leaflet-zoomex/blob/main/dist
 
 And add the control to the map.
 
-```
+```js
 new L.Control.ZoomEx({
     className: "leaflet-zoomex-rightcenter",
 }).addTo(map);
