@@ -9,12 +9,12 @@ A Leaflet plugin that displays a zoom control on the map, with a customizable ap
 
 # Usage
 
-Simply include the [JS](https://github.com/mfhsieh/leaflet-zoomex/blob/main/src/leaflet-zoomex.js) and [CSS](https://github.com/mfhsieh/leaflet-zoomex/blob/main/examples/demo.css) in the head.
+Simply include the [JS](https://github.com/mfhsieh/leaflet-zoomex/blob/main/dist/leaflet-zoomex.min.js) and [CSS](https://github.com/mfhsieh/leaflet-zoomex/blob/main/examples/demo.css) in the head.
 
 ```
 <head>
     ...
-    <script src="leaflet-zoomex.js"></script>
+    <script src="dist/leaflet-zoomex.min.js"></script>
     <link rel="stylesheet" href="demo.css" />
     ...
 </head>
