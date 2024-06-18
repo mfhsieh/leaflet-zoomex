@@ -1,5 +1,5 @@
 /*
- * Leaflet.ZoomEx v1.0.0 - 2024-06-15
+ * Leaflet.ZoomEx v1.0.1 - 2024-06-15
  *
  * Copyright 2024 mfhsieh
  * mfhsieh@gmail.com
@@ -31,7 +31,7 @@
 })(function (L) {
     "use strict";
 
-    const control = L.Control.extend({
+    const ZoomEx = L.Control.extend({
 
         options: {
             className: "",
@@ -118,5 +118,9 @@
         },
     });
 
-    return control;
+    L.control.zoomEx = function (options) {
+        return new ZoomEx(options);
+    };
+
+    return ZoomEx;
 });
