@@ -9,7 +9,7 @@ A Leaflet plugin that displays a zoom control on the map, with a customizable ap
 
 # Usage
 
-Simply include the [JS](https://github.com/mfhsieh/leaflet-zoomex/blob/main/dist/leaflet-zoomex.min.js) and [CSS](https://github.com/mfhsieh/leaflet-zoomex/blob/main/examples/demo.css) in the head.
+Simply include the [JS](dist/leaflet-zoomex.min.js) and [CSS](examples/demo.css) in the head.
 
 ```html
 <head>
@@ -28,7 +28,7 @@ new L.Control.ZoomEx({
 }).addTo(map);
 ```
 
-For more examples, refer to this [demo](https://mfhsieh.github.io/leaflet-zoomex/) (code: [index.html](https://github.com/mfhsieh/leaflet-zoomex/blob/main/index.html), [demo.css](https://github.com/mfhsieh/leaflet-zoomex/blob/main/examples/demo.css)).
+For more examples, refer to this [demo](https://mfhsieh.github.io/leaflet-zoomex/) (code: [index.html](index.html), [demo.css](examples/demo.css)).
 
 
 # Options
@@ -37,8 +37,8 @@ For more examples, refer to this [demo](https://mfhsieh.github.io/leaflet-zoomex
 | ---------------- | -------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | className        | String   | ""                                                                                      | the custom CSS class name assigned to the control                                                                     |
 | afterZoomEnd     | Function | null                                                                                    | the callback function after the "zoomend" event                                                                      |
-| zoomOutHtml      | String   | refer to [zoom_out.svg](https://github.com/mfhsieh/leaflet-zoomex/blob/main/images/zoom_out.svg) | the HTML content of the zoom-out button                                                                              |
-| zoomInHtml       | String   | refer to [zoom_in.svg](https://github.com/mfhsieh/leaflet-zoomex/blob/main/images/zoom_in.svg)   | the HTML content of the zoom-in button                                                                               |
+| zoomOutHtml      | String   | refer to [zoom_out.svg](images/zoom_out.svg) | the HTML content of the zoom-out button                                                                              |
+| zoomInHtml       | String   | refer to [zoom_in.svg](images/zoom_in.svg)   | the HTML content of the zoom-in button                                                                               |
 | zoomOutTitle     | String   | "Map Zoom Out"                                                                          | the "title" attribute of the zoom-out button                                                                           |
 | zoomInTitle      | String   | "Map Zoom In"                                                                           | the "title" attribute of the zoom-in button                                                                            |
 | sliderTitle      | String   | "Map Zoom In / Zoom Out Slider"                                                         | the "title" attribute of the zoom slider                                                                               |
