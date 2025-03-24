@@ -4,7 +4,7 @@ Leaflet.ZoomEx
 A [Leaflet](https://leafletjs.com/) plugin that displays a zoom control on the map, with a customizable appearance and position using CSS.
 
 * Demo Page: [demo](https://mfhsieh.github.io/leaflet-zoomex/)
-* Current Version: v1.0.1
+* Current Version: v1.0.2
 * Tested on desktop and mobile versions of Chrome, Edge, Firefox, and Safari.
 
 
