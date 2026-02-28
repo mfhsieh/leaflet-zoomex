@@ -21,7 +21,8 @@ import L from "leaflet";
  * @extends L.Control
  * @classdesc A Leaflet control that adds zoom in/out buttons and a zoom slider.
  * @example
- * L.control.zoomEx().addTo(map);
+ * import ZoomEx from './dist/leaflet-zoomex_v2.min.js';
+ * new ZoomEx().addTo(map);
  */
 const ZoomEx = L.Control.extend({
     /**
@@ -161,7 +162,7 @@ const ZoomEx = L.Control.extend({
 /**
  * Factory function to create a new ZoomEx control.
  * @param {ZoomExOptions} options - Control options.
- * @returns {L.Control.ZoomEx} A new ZoomEx control.
+ * @returns {ZoomEx} A new ZoomEx control.
  */
 export const zoomEx = function (options) {
     return new ZoomEx(options);
