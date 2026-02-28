@@ -1,7 +1,7 @@
 /*
- * Leaflet.ZoomEx v1.0.2 - 2025-03-23
+ * Leaflet.ZoomEx v1.0.3 - 2026-02-28
  *
- * Copyright 2024 mfhsieh
+ * Copyright 2026 mfhsieh
  * mfhsieh@gmail.com
  *
  * Licensed under the MIT license.
@@ -36,7 +36,7 @@
      * @classdesc A Leaflet control that adds zoom in/out buttons and a zoom slider.
      * @example
      * L.control.zoomEx().addTo(map);
-     */    
+     */
     const ZoomEx = L.Control.extend({
         /**
          * @typedef {object} ZoomExOptions
@@ -46,11 +46,11 @@
          * @property {string} [zoomOutTitle="Map Zoom Out"] - Title attribute for the zoom out button.
          * @property {string} [zoomInTitle="Map Zoom In"] - Title attribute for the zoom in button.
          * @property {string} [sliderTitle="Map Zoom In / Zoom Out Slider"] - Title attribute for the zoom slider.
-         * @property {string} [zoomOutAriaLabel=""] - Aria-label attribute for the zoom out button.
-         * @property {string} [zoomInAriaLabel=""] - Aria-label attribute for the zoom in button.
-         * @property {string} [sliderAriaLabel=""] - Aria-label attribute for the zoom slider.
+         * @property {string} [zoomOutAriaLabel=""] - Aria-label attribute for the zoom out button. If it is an empty string, it will be equal to "zoomOutTitle".
+         * @property {string} [zoomInAriaLabel=""] - Aria-label attribute for the zoom in button. If it is an empty string, it will be equal to "zoomInTitle".
+         * @property {string} [sliderAriaLabel=""] - Aria-label attribute for the zoom slider. If it is an empty string, it will be equal to "sliderTitle".
          * @property {function} [afterZoomEnd=null] - Callback function to be executed after the map zoom ends.
-         */        
+         */
         options: {
             className: "",
             zoomOutHtml: `
@@ -109,7 +109,7 @@
             L.DomEvent.on(this._slider, "change", this._onSliderInput, this);
             map.on("zoomend", this._updateSlider, this);
 
-            this._zoomInButton = this._createButton(this.options.zoomInHtml, "leaflet-zoomex-in", container, this._zoomIn, this.options.zoomInTitle, this.options.zoomOutAriaLabel);
+            this._zoomInButton = this._createButton(this.options.zoomInHtml, "leaflet-zoomex-in", container, this._zoomIn, this.options.zoomInTitle, this.options.zoomInAriaLabel);
 
             return container;
         },

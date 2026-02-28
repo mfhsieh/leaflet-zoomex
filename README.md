@@ -1,14 +1,14 @@
-Leaflet.ZoomEx
-=
+# Leaflet.ZoomEx
 
 A [Leaflet](https://leafletjs.com/) plugin that displays a zoom control on the map, with a customizable appearance and position using CSS.
 
-* Demo Page: [demo](https://mfhsieh.github.io/leaflet-zoomex/)
-* Current Version: v1.0.2
+* Demo Page: [Leaflet 1 demo](https://mfhsieh.github.io/leaflet-zoomex/index.html) or [Leaflet 2 demo](https://mfhsieh.github.io/leaflet-zoomex/index_v2.html)
+* Current Version: v1.0.3 / v2.0.0-alpha.1 (2026-02-28)
 * Tested on desktop and mobile versions of Chrome, Edge, Firefox, and Safari.
 
+## Usage
 
-# Usage
+### Leaflet 1.x (Classic)
 
 Simply include the [JS](dist/leaflet-zoomex.min.js) and [CSS](examples/demo.css) in the head.
 
@@ -16,12 +16,12 @@ Simply include the [JS](dist/leaflet-zoomex.min.js) and [CSS](examples/demo.css)
 <head>
     ...
     <script src="dist/leaflet-zoomex.min.js"></script>
-    <link rel="stylesheet" href="demo.css" />
+    <link rel="stylesheet" href="examples/demo.css" />
     ...
 </head>
 ```
 
-And add the control to the map.
+Then create a `ZoomEx` instance and add it to the map.
 
 ```js
 new L.Control.ZoomEx({
@@ -29,31 +29,44 @@ new L.Control.ZoomEx({
 }).addTo(map);
 ```
 
-For more details, refer to this [demo](https://mfhsieh.github.io/leaflet-zoomex/) (code: [index.html](index.html), [demo.css](examples/demo.css)).
+### Leaflet 2.x (ESM)
 
+For Leaflet 2.x, use the ESM-ready version [leaflet-zoomex_v2.js](dist/leaflet-zoomex_v2.min.js).
 
-# Options
+```js
+import L from 'leaflet';
+import ZoomEx from './dist/leaflet-zoomex_v2.min.js';
 
-| Option           | Type     | Default                                      | Description                                                                                                      |
-| ---------------- | -------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| className        | String   | ""                                           | the custom CSS class name assigned to the control                                                                |
-| afterZoomEnd     | Function | null                                         | the callback function after the "zoomend" event                                                                  |
-| zoomOutHtml      | String   | refer to [zoom_out.svg](images/zoom_out.svg) | the HTML content of the zoom-out button                                                                          |
-| zoomInHtml       | String   | refer to [zoom_in.svg](images/zoom_in.svg)   | the HTML content of the zoom-in button                                                                           |
-| zoomOutTitle     | String   | "Map Zoom Out"                               | the "title" attribute of the zoom-out button                                                                     |
-| zoomInTitle      | String   | "Map Zoom In"                                | the "title" attribute of the zoom-in button                                                                      |
-| sliderTitle      | String   | "Map Zoom In / Zoom Out Slider"              | the "title" attribute of the zoom slider                                                                         |
-| zoomOutAriaLabel | String   | ""                                           | the "aria-label" attribute of the zoom-out button. If it is an empty string, it will be equal to "zoomOutTitle". |
-| zoomInAriaLabel  | String   | ""                                           | the "aria-label" attribute of the zoom-in button.  If it is an empty string, it will be equal to "zoomInTitle".  |
-| sliderAriaLabel  | String   | ""                                           | the "aria-label" attribute of the zoom slider.  If it is an empty string, it will be equal to "sliderTitle".     |
+const map = new L.Map('map', { zoomControl: false });
 
+new ZoomEx({
+    position: "topleft",
+    className: "leaflet-zoomex-topleft",
+}).addTo(map);
+```
 
-# Where
+For more details, refer to the [Leaflet 1 demo](index.html) or [Leaflet 2 demo](index_v2.html).
 
-* Source Code: [Github](https://github.com/mfhsieh/leaflet-zoomex)
+## Options
 
+| Option | Type | Default | Description |
+| ---- | ---- | ---- | ---- |
+| className | String | "" | Custom CSS class name to assign to the zoom control container. |
+| zoomInHtml | String | (SVG) | HTML content for the zoom in button. |
+| zoomOutHtml | String | (SVG) | HTML content for the zoom out button. |
+| zoomInTitle | String | "Map Zoom In" | Title attribute for the zoom in button. |
+| zoomOutTitle | String | "Map Zoom Out" | Title attribute for the zoom out button. |
+| sliderTitle | String | "Map Zoom In / Zoom Out Slider" | Title attribute for the zoom slider. |
+| zoomInAriaLabel | String | "" | Aria-label attribute for the zoom in button. (Defaults to `zoomInTitle` if empty) |
+| zoomOutAriaLabel | String | "" | Aria-label attribute for the zoom out button. (Defaults to `zoomOutTitle` if empty) |
+| sliderAriaLabel | String | "" | Aria-label attribute for the zoom slider. (Defaults to `sliderTitle` if empty) |
+| afterZoomEnd | Function | null | Callback function to be executed after the map zoom ends. |
 
-# Author
+## Where
+
+* Source Code: [GitHub](https://github.com/mfhsieh/leaflet-zoomex)
+
+## Author
 
 * email: mfhsieh at gmail.com
-* Github: [Github](https://github.com/mfhsieh/)
+* Github: [GitHub](https://github.com/mfhsieh/)

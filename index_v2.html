@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Leaflet.ZoomEx - Demo (v2.0.0-alpha.1)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.css" />
+    <script type="importmap">
+    {
+        "imports": {
+            "leaflet": "https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.js"
+        }
+    }
+    </script>
+
+    <script src="https://kit.fontawesome.com/8132850410.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="examples/demo.css" />
+
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            --primary-rgb: 25, 135, 84;
+        }
+
+        #map {
+            height: calc(var(--vh, 1vh) * 100);
+            width: 100vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script type="module">
+        import L from 'leaflet';
+        import ZoomEx from './dist/leaflet-zoomex_v2.min.js';
+        // import ZoomEx from './src/leaflet-zoomex_v2.js';
+
+        "use strict";
+
+        function set_viewport() {
+            document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+        }
+
+        set_viewport();
+        window.addEventListener("resize", set_viewport);
+
+        const map = new L.Map("map", {
+            center: [25.0487037, 121.5143449],
+            zoom: 13,
+            zoomControl: false,
+        });
+
+        new L.TileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            minZoom: 3,
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
+        }).addTo(map);
+
+        new ZoomEx({
+            position: "topleft",
+            className: "leaflet-zoomex-topleft",
+            zoomOutHtml: '<i class="fas fa-minus-square"></i>',
+            zoomInHtml: '<i class="fas fa-plus-square"></i>',
+        }).addTo(map);
+
+        new ZoomEx({
+            position: "topleft",
+            className: "leaflet-zoomex-topcenter",
+        }).addTo(map);
+
+        new ZoomEx({
+            // position: "topright",
+            className: "leaflet-zoomex-topright",
+            zoomOutHtml: '<i class="fas fa-search-minus"></i>',
+            zoomInHtml: '<i class="fas fa-search-plus"></i>',
+        }).addTo(map);
+
+        new ZoomEx({
+            position: "bottomleft",
+            className: "leaflet-zoomex-bottomleft",
+            zoomOutHtml: '<i class="far fa-minus-square"></i>',
+            zoomInHtml: '<i class="far fa-plus-square"></i>',
+        }).addTo(map);
+
+        new ZoomEx({
+            position: "bottomleft",
+            className: "leaflet-zoomex-bottomcenter",
+        }).addTo(map);
+
+        new ZoomEx({
+            position: "bottomright",
+            className: "leaflet-zoomex-bottomright",
+            zoomOutHtml: '<i class="fas fa-minus"></i>',
+            zoomInHtml: '<i class="fas fa-plus"></i>',
+        }).addTo(map);
+
+        new ZoomEx({
+            position: "topleft",
+            className: "leaflet-zoomex-lefttop",
+            zoomOutHtml: '<i class="fas fa-chevron-circle-down"></i>',
+            zoomInHtml: '<i class="fas fa-chevron-circle-up"></i>',
+        }).addTo(map);
+
+        new ZoomEx({
+            position: "topleft",
+            className: "leaflet-zoomex-leftcenter",
+        }).addTo(map);
+
+        new ZoomEx({
+            position: "bottomleft",
+            className: "leaflet-zoomex-leftbottom",
+            zoomOutHtml: '<i class="fas fa-caret-square-down"></i>',
+            zoomInHtml: '<i class="fas fa-caret-square-up"></i>',
+        }).addTo(map);
+
+        new ZoomEx({
+            // position: "topright",
+            className: "leaflet-zoomex-righttop",
+            zoomOutHtml: '<i class="fas fa-arrow-circle-down"></i>',
+            zoomInHtml: '<i class="fas fa-arrow-circle-up"></i>',
+        }).addTo(map);
+
+        new ZoomEx({
+            // position: "topright",
+            className: "leaflet-zoomex-rightcenter",
+        }).addTo(map);
+
+        new ZoomEx({
+            position: "bottomright",
+            className: "leaflet-zoomex-rightbottom",
+            zoomOutHtml: '<i class="fas fa-arrow-alt-circle-down"></i>',
+            zoomInHtml: '<i class="fas fa-arrow-alt-circle-up"></i>',
+        }).addTo(map);
+    </script>
+</body>
+
+</html>
